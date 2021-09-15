@@ -77,3 +77,11 @@ Resources:
        DestinationCidrBlock: 0.0.0.0/0
        GatewayId:
          Ref: IBMInternetGateway  
+
+  IBMPubSubnetRouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId:
+        Ref: IBMPubSubnet
+      RouteTableId:
+        Ref: IBMPubRouteTable
